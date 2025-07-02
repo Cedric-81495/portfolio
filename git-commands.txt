@@ -1,0 +1,75 @@
+git remote add origin https://github.com/Cedric-81495/portfolio.git
+git branch -M main  
+
+Clone repo
+git clone https://github.com/Cedric-81495/portfolio.git
+
+If you're inside a local project folder and linking it to GitHub:
+git remote add origin https://github.com/Cedric-81495/portfolio.git
+
+git clone https://github.com/Cedric-81495/portfolio.git
+
+Inside VS Code's terminal (`Ctrl + ``) at the bottom:
+git init
+
+Stage and Commit
+git add . (eveything)
+git add filename
+git add folder_name
+git commit -m "Initial commit"
+
+
+
+Connect to GitHub
+If you already created a GitHub repo:
+git remote add origin https://github.com/yourusername/your-repo.git
+git branch -M main
+git push -u origin main
+
+git config --global user.name "Jhon Cedric"
+git config --global user.email "cedricsusmerano@gmail.com"
+
+Authorizing will redirect to
+http://127.0.0.1:56945
+
+If you deleted a file and haven’t committed yet:
+git restore path/to/your-file.ext
+
+If you already committed the deletion but haven’t pushed yet:
+git checkout HEAD~1 -- path/to/your-file.ext
+
+This grabs the file from the previous commit.
+Or, if you know the commit hash where the file existed
+git checkout <commit-hash> -- path/to/your-file.ext
+
+
+If you’ve already pushed the deletion to GitHub:
+- You can still restore the file by checking out a previous version and recommitting it:
+git log -- path/to/your-file.ext
+
+
+Find the commit hash where the file last existed, then:
+git checkout <commit-hash> -- path/to/your-file.ext
+git add path/to/your-file.ext
+git commit -m "Restore deleted file"
+git push
+
+
+
+🧠 Bonus: See What Was Deleted
+To list deleted files in your repo history:
+git log --diff-filter=D --summary
+
+
+This shows which files were deleted and when.
+Let me know if you want to restore an entire folder or if you’re not sure which commit had the file—I can help you track it down!
+git log -- path/to/your-file.ext
+
+Find the commit hash where the file last existed, then:
+git checkout <commit-hash> -- path/to/your-file.ext
+git add path/to/your-file.ext
+git commit -m "Restore deleted file"
+git push
+
+To list deleted files in your repo history
+git log --diff-filter=D --summary
