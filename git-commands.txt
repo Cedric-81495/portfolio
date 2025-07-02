@@ -73,3 +73,7 @@ git push
 
 To list deleted files in your repo history
 git log --diff-filter=D --summary
+
+Merge Remote Changes Into Your Local Branch
+This is the safest and most common approach:
+git pull origin main --rebase
